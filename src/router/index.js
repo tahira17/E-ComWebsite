@@ -23,6 +23,15 @@ const routes = [
     name: "cart",
     component: () => import("../views/Cart.vue"),
   },
+  {
+    path: "/ProductPage",
+    name: "ProductPage",
+    component: () => import("../components/ProductPage"),
+    meta: {
+      hideNavbar: true,
+     }
+  },
+  
 ];
 
 const router = createRouter({

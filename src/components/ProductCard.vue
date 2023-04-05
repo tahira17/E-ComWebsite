@@ -5,7 +5,7 @@
         <img class="img-style" :src="imgSrc" :alt="brand + model" />
       </div>
       <p class="price-label">₿ {{ price.toFixed(2) }}</p>
-      <button @click="addToCart">Add to Cart</button>
+      <!-- <button @click="addToCart">Add to Cart</button> -->
       <button @click="ViewDetails">View Details</button>
       
 
@@ -16,6 +16,7 @@
   </template>
   
   <script>
+  import router from '../router/index'
   export default {
     name: "ProductCard",
     props: [
@@ -42,7 +43,18 @@
         });
       },
       ViewDetails(){
-        console.log("HelloWorld..")
+        router.push("/ProductPage")
+        this.$store.dispatch("ProductPage", {
+          id: this.id,
+          type: this.type,
+          brand: this.brand,
+          model: this.model,
+          color: this.color,
+          capacity: this.capacity,
+          imgSrc: this.imgSrc,
+          price: this.price,
+        });
+        
       }
     },
 

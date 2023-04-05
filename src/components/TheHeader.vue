@@ -4,7 +4,7 @@
       <router-link to="/">All Products</router-link>
       <router-link to="/smartphones">Smartphones</router-link>
       <router-link to="/tablets">Tablets</router-link>
-      <router-link to="/cart">Cart</router-link>
+      <!-- <router-link to="/cart">Cart</router-link> -->
       <span class="counter-cart" v-if="socketCart > 0"> {{ socketCart }} </span>
     </div>
   </template>

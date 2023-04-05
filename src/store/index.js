@@ -6,6 +6,8 @@ import rootGetters from "./getters.js";
 const store= createStore({
   state() {
     return {
+      product:{
+      },
 cart:[],
 total:0,
 qty:0,

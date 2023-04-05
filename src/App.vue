@@ -1,5 +1,5 @@
 <template>
-<TheHeader />
+<TheHeader  v-if="!$route.meta.hideNavbar" />
 <router-view />
 </template>
 <script>
